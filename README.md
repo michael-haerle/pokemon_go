@@ -23,7 +23,9 @@ ___
 
 
 ## <a name="project_description"></a>Project Description:
-A project to do exploratory data analysis on one of the most popular mobile games since 2016.
+A project to do exploratory data analysis on one of the most popular mobile games since 2016. This will be done using a combination of data from pokemon go and the main series games. (Side note: The formula used to calculate what I call "Battle Stat" changes partway through this project. If you would like to know more please refer to the description below.
+
+What is Battle Stat? Battle stat is the name I use to call stat that is used to mimic the actual performance in simulations. At first it was found using Damage Per Second^3 * Total Damage Output. However this has it flaws as it slightly favours bulky attackers and underrates the opposite. Thus a new formula was developed by redit user u/Elastic_Space, this formula is calculated from the 4th power root of Damage Per Second^3 * Total Damage Output.
 
 
 [[Back to top](#top)]
@@ -53,6 +55,7 @@ A project to do exploratory data analysis on one of the most popular mobile game
 - 
 
 ### Need to haves (Deliverables):
+- A new csv with updated pokemon data for up to generation 8.
 - A final report notebook
 - A function that will take a Pokemon name as an input and output its stats and best moveset.
 
