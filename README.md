@@ -17,7 +17,6 @@ by: Michael Haerle
 [[Data Dictionary](#dictionary)]
 [[Data Acquire and Prep](#wrangle)]
 [[Data Exploration](#explore)]
-[[Statistical Analysis](#stats)]
 [[Conclusion](#conclusion)]
 ___
 
@@ -108,29 +107,6 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 ### Takeaways from exploration:
 - 
-
-***
-
-## <a name="stats"></a>Statistical Analysis
-[[Back to top](#top)]
-
-### Stats Test 1: (Ex. Chi Square)
-
-
-#### Hypothesis:
-- The null hypothesis (H<sub>0</sub>) is: Blank and Blank are independent
-- The alternate hypothesis (H<sub>1</sub>) is: There is a relationship between Blank and Blank
-
-#### Confidence level and alpha value:
-- I established a 95% confidence level
-- alpha = 1 - confidence, therefore alpha is 0.05
-
-#### Results:
-- We reject the null hypothesis that Blank and Blank are independent
-- There is a relationship between Blank and Blank
-- P-Value 
-- Chi2 
-- Degrees of Freedom 
 
 
 ***
