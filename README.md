@@ -17,7 +17,6 @@ by: Michael Haerle
 [[Data Dictionary](#dictionary)]
 [[Data Acquire and Prep](#wrangle)]
 [[Data Exploration](#explore)]
-[[Statistical Analysis](#stats)]
 [[Conclusion](#conclusion)]
 ___
 
@@ -25,7 +24,7 @@ ___
 ## <a name="project_description"></a>Project Description:
 A project to do exploratory data analysis on one of the most popular mobile games since 2016. This will be done using a combination of data from pokemon go and the main series games. (Side note: The formula used to calculate what I call "Battle Stat" changes partway through this project. If you would like to know more please refer to the description below.
 
-What is Battle Stat? Battle stat is the name I use to call stat that is used to mimic the actual performance in simulations. At first it was found using Damage Per Second^3 * Total Damage Output. However this has it flaws as it slightly favours bulky attackers and underrates the opposite. Thus a new formula was developed by redit user u/Elastic_Space, this formula is calculated from the 4th power root of Damage Per Second^3 * Total Damage Output.
+What is Battle Stat? Battle stat is the name I use to call stat that is used to mimic the actual performance in simulations. At first it was found using Damage Per Second^3 * Total Damage Output. However this has it flaws as it slightly favours bulky attackers and underrates the opposite. Thus a new formula was developed by redit user u/Elastic_Space, this formula is calculated from the 4th power root of Damage Per Second^3 * Total Damage Output. They named this value ER or Equivalent Rating which I refer to as Battle_Stat as I feel it's more intuitive.
 
 
 [[Back to top](#top)]
@@ -85,6 +84,13 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 | Attribute | Definition | Data Type |
 | ----- | ----- | ----- |
 | Pokemon | Name of the pokemon | object |
+| DPS | Damage per Second | float64 |
+| TDO | Total Damage Output | float64 |
+| Battle_Stat | Name used to replace ER(refer to paragraph in the project description for more info) | float64 |
+| Max_CP_Lv40 | The max CP(Combat Power) a Pokemon can have at level 40 in Pokemon GO) | int64 |
+| Fast_Move | The fast attack the Pokemon uses in Pokemon GO | object |
+| Charged_Move | The charged attack the Pokemon uses in Pokemon GO | object |
+
 
 ***
 
@@ -108,29 +114,6 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 ### Takeaways from exploration:
 - 
-
-***
-
-## <a name="stats"></a>Statistical Analysis
-[[Back to top](#top)]
-
-### Stats Test 1: (Ex. Chi Square)
-
-
-#### Hypothesis:
-- The null hypothesis (H<sub>0</sub>) is: Blank and Blank are independent
-- The alternate hypothesis (H<sub>1</sub>) is: There is a relationship between Blank and Blank
-
-#### Confidence level and alpha value:
-- I established a 95% confidence level
-- alpha = 1 - confidence, therefore alpha is 0.05
-
-#### Results:
-- We reject the null hypothesis that Blank and Blank are independent
-- There is a relationship between Blank and Blank
-- P-Value 
-- Chi2 
-- Degrees of Freedom 
 
 
 ***
