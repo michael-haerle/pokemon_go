@@ -84,6 +84,13 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 | Attribute | Definition | Data Type |
 | ----- | ----- | ----- |
 | Pokemon | Name of the pokemon | object |
+| DPS | Damage per Second | float64 |
+| TDO | Total Damage Output | float64 |
+| Battle_Stat | Name used to replace ER(refer to paragraph at the end of table for more info) | float64 |
+| Max_CP_Lv40 | The max CP(Combat Power) a Pokemon can have at level 40 in Pokemon GO) | int64 |
+| Fast_Move | The fast attack the Pokemon uses in Pokemon GO | object |
+| Charged_Move | The charged attack the Pokemon uses in Pokemon GO | object |
+
 
 ***
 
