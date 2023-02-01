@@ -8,7 +8,7 @@ from scipy.stats import spearmanr
 
 def wrangle_df():
     df = pd.read_csv('comprehensive_dps_updated.csv')
-    df.rename(columns = {'DPS^3*TDO' : 'Battle_Stat'}, inplace = True)
+    df.rename(columns = {'ER' : 'Battle_Stat'}, inplace = True)
     df1 = pd.read_csv('Pokemon.csv')
     df1.rename(columns = {'Name' : 'Pokemon'}, inplace = True)
     df_best_attack_set = pd.read_csv('Best_Attack_Set_Updated.csv')
