@@ -90,6 +90,18 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 | Max_CP_Lv40 | The max CP(Combat Power) a Pokemon can have at level 40 in Pokemon GO) | int64 |
 | Fast_Move | The fast attack the Pokemon uses in Pokemon GO | object |
 | Charged_Move | The charged attack the Pokemon uses in Pokemon GO | object |
+| # | The id number of the pokemon in the games | float64 |
+| Type 1 | The primary type of the pokemon | object |
+| Type 2 | The secondary type of the pokemon | object |
+| Total | The sum of HP, Attack, Defense, Sp. Atk, Sp. Def, and Speed | float64 |
+| HP | The Hit Points or health of the pokemon | float64 |
+| Attack | The numerical value assigned to the damage a pokemons physical attacks will do | float64 |
+| Defense | The numerical value assigned to the pokemon to take reduced damage from a physical attack | float64 |
+| Sp. Atk | The numerical value assigned to the damage a pokemons non-physical attacks will do | float64 |
+| Sp. Def | The numerical value assigned to the pokemon to take reduced damage from a non-physical attack | float64 |
+| Speed | The numerical value that determines how fast the pokemon is, this determines who attacks first | float64 |
+| Generation | What generation the pokemon comes from | float64 |
+| Legendary | 1 if the pokemon is a legendary, 0 if the pokemon is not a legendary | object |
 
 
 ***
