@@ -60,7 +60,7 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 
 ### Nice to haves (With more time):
- - 
+ - Feature engineering columns for if the pokemon is a mythical, ultra beast, baby form, has multiple forms, or has a primal form.
 
 
 ### Steps to Reproduce:
