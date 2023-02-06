@@ -57,3 +57,24 @@ def dragon_vs_bug_atk_def_vis(df_best_attack_set):
     fig=plt.gcf()  #get the current figure using .gcf()
     fig.set_size_inches(12,6) #set the size for the figure
     plt.show()
+
+def dragon_vs_bug_spatk_spdef_vis(df_best_attack_set):
+    dragon=df_best_attack_set[(df_best_attack_set['Type 1']=='Dragon') | ((df_best_attack_set['Type 2'])=="Dragon")] 
+    bug=df_best_attack_set[(df_best_attack_set['Type 1']=='Bug') | ((df_best_attack_set['Type 2'])=="Bug")]
+    plt.scatter(dragon['Sp. Atk'].head(100),dragon['Sp. Def'].head(100),c='mediumblue',label='Dragon',marker="*",s=25)
+    plt.scatter(bug['Sp. Atk'].head(100),bug['Sp. Def'].head(100),c='olivedrab',label="Bug",s=20)
+    plt.xlabel("Sp. Atk")
+    plt.ylabel("Sp. Def")
+    dragon_avg_attack = dragon['Sp. Atk'].mean()
+    dragon_avg_defense = dragon['Sp. Def'].mean()
+    plt.axhline(dragon_avg_attack, label='Dragon Sp. Atk Average', c = 'royalblue')
+    plt.axvline(dragon_avg_defense, label='Dragon Sp. Def Average', c = 'royalblue')
+    bug_avg_attack = bug['Sp. Atk'].mean()
+    bug_avg_defense = bug['Sp. Def'].mean()
+    plt.axhline(bug_avg_attack, label='Bug Sp. Atk Average', c = 'yellowgreen')
+    plt.axvline(bug_avg_defense, label='Bug Sp. Def Average', c = 'yellowgreen')
+    plt.legend()
+    plt.plot()
+    fig=plt.gcf()  #get the current figure using .gcf()
+    fig.set_size_inches(12,6) #set the size for the figure
+    plt.show()
