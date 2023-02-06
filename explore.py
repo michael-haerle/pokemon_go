@@ -37,7 +37,7 @@ def pri_type_avg_stats(df_best_attack_set):
                         'pink', 'wheat', 'mediumorchid', 'olivedrab'])
     plt.title('Dragon as a primary type has the highest average total stats')
 
-def dragon_vs_bug_vis(df_best_attack_set):
+def dragon_vs_bug_atk_def_vis(df_best_attack_set):
     dragon=df_best_attack_set[(df_best_attack_set['Type 1']=='Dragon') | ((df_best_attack_set['Type 2'])=="Dragon")] 
     bug=df_best_attack_set[(df_best_attack_set['Type 1']=='Bug') | ((df_best_attack_set['Type 2'])=="Bug")]
     plt.scatter(dragon.Attack.head(100),dragon.Defense.head(100),c='mediumblue',label='Dragon',marker="*",s=25)
