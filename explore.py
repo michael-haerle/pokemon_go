@@ -36,3 +36,24 @@ def pri_type_avg_stats(df_best_attack_set):
                         'gold', 'slateblue', 'tan', 'aqua', 'dodgerblue', 'limegreen', 'sienna',
                         'pink', 'wheat', 'mediumorchid', 'olivedrab'])
     plt.title('Dragon as a primary type has the highest average total stats')
+
+def dragon_vs_bug_vis(df_best_attack_set):
+    dragon=df_best_attack_set[(df_best_attack_set['Type 1']=='Dragon') | ((df_best_attack_set['Type 2'])=="Dragon")] 
+    bug=df_best_attack_set[(df_best_attack_set['Type 1']=='Bug') | ((df_best_attack_set['Type 2'])=="Bug")]
+    plt.scatter(dragon.Attack.head(100),dragon.Defense.head(100),c='mediumblue',label='Dragon',marker="*",s=25)
+    plt.scatter(bug.Attack.head(100),bug.Defense.head(100),c='olivedrab',label="Bug",s=20)
+    plt.xlabel("Attack")
+    plt.ylabel("Defense")
+    dragon_avg_attack = dragon.Attack.mean()
+    dragon_avg_defense = dragon.Defense.mean()
+    plt.axhline(dragon_avg_attack, label='Dragon Attack Average', c = 'royalblue')
+    plt.axvline(dragon_avg_defense, label='Dragon Defense Average', c = 'royalblue')
+    bug_avg_attack = bug.Attack.mean()
+    bug_avg_defense = bug.Defense.mean()
+    plt.axhline(bug_avg_attack, label='Bug Attack Average', c = 'yellowgreen')
+    plt.axvline(bug_avg_defense, label='Bug Defense Average', c = 'yellowgreen')
+    plt.legend()
+    plt.plot()
+    fig=plt.gcf()  #get the current figure using .gcf()
+    fig.set_size_inches(12,6) #set the size for the figure
+    plt.show()
