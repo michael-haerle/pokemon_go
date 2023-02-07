@@ -53,6 +53,7 @@ def dragon_vs_bug_atk_def_vis(df_best_attack_set):
     plt.axhline(bug_avg_attack, label='Bug Attack Average', c = 'yellowgreen')
     plt.axvline(bug_avg_defense, label='Bug Defense Average', c = 'yellowgreen')
     plt.legend()
+    plt.title('Dragon vs Bug Comparing Attack and Defense')
     plt.plot()
     fig=plt.gcf()  #get the current figure using .gcf()
     fig.set_size_inches(12,6) #set the size for the figure
