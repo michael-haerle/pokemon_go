@@ -51,6 +51,7 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 - What pokemon in Pokemon Go has the highest and lowest cp?
 - What "S tier pokemon" in Pokemon Go has the highest and lowest Battle Stat?
 - What pokemon in Pokemon Go has the highest and lowest average battle stat between all of their move sets?
+- What primary type has the highest average total stats?
 - 
 
 ### Need to haves (Deliverables):
