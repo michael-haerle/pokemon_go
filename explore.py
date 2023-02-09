@@ -80,3 +80,13 @@ def dragon_vs_bug_spatk_spdef_vis(df_best_attack_set):
     fig=plt.gcf()  #get the current figure using .gcf()
     fig.set_size_inches(12,6) #set the size for the figure
     plt.show()
+
+def stats_by_gen_vis(df1):
+    avg_stats_by_gen = df1.groupby('Generation').mean()
+    plt.figure(figsize=(15, 8))
+    gfg = sns.lineplot(data=df1, x="Type 1", y="Total", hue="Generation", ci=None, palette='hls', style="Generation", markers=True)
+    # for legend text
+    plt.setp(gfg.get_legend().get_texts(), fontsize='13')  
+    # for legend title
+    plt.setp(gfg.get_legend().get_title(), fontsize='20') 
+    plt.show()
