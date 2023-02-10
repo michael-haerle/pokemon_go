@@ -89,4 +89,5 @@ def stats_by_gen_vis(df1):
     plt.setp(gfg.get_legend().get_texts(), fontsize='13')  
     # for legend title
     plt.setp(gfg.get_legend().get_title(), fontsize='20') 
+    plt.title('Total Stats Average by Type and Generation')
     plt.show()
