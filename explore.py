@@ -102,4 +102,5 @@ def top_10_types_by_generation(df1):
     sns.swarmplot(x='Generation',y='Total',data=df3,hue='Legendary')
     # It is distributed by Type
     plt.axhline(df3['Total'].mean(),color='red',linestyle='dashed')
+    plt.title('Top 10 Types by Average Total Stats in Each Generation')
     plt.show()
