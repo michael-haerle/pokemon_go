@@ -91,3 +91,15 @@ def stats_by_gen_vis(df1):
     plt.setp(gfg.get_legend().get_title(), fontsize='20') 
     plt.title('Total Stats Average by Type and Generation')
     plt.show()
+
+def top_10_types_by_generation(df1):
+    plt.figure(figsize=(15,8))
+    #take the top 10 Types
+    top_types=df1['Type 1'].value_counts()[:10]
+    #take the pokemons of the type with highest numbers, top 10
+    df3=df1[df1['Type 1'].isin(top_types.index)]
+    # this plot shows the points belonging to individual pokemons
+    sns.swarmplot(x='Generation',y='Total',data=df3,hue='Legendary')
+    # It is distributed by Type
+    plt.axhline(df3['Total'].mean(),color='red',linestyle='dashed')
+    plt.show()
