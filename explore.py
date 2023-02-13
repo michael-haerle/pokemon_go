@@ -104,3 +104,47 @@ def top_10_types_by_generation(df1):
     plt.axhline(df3['Total'].mean(),color='red',linestyle='dashed')
     plt.title('Top 10 Pokemon by Type and Average Total Stats in Each Generation')
     plt.show()
+
+def primary_type_pie_chart():
+    #define data
+    labels = ['Water', 'Normal', 'Grass', 'Bug', 'Psychic', 'Fire', 'Electric', 'Rock', 'Dragon', 'Ground',
+            'Ghost', 'Dark', 'Poison', 'Steel', 'Fighting', 'Ice', 'Fairy', 'Flying']
+
+    data = [14.0, 12.2, 8.8, 8.6, 7.1, 6.5, 5.5, 5.5, 4.0, 4.0, 4.0, 3.9, 3.5, 3.4, 3.4, 3.0, 2.1, 0.5]
+    explode = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.1, 0.1, 0.1,0.1, 0.1, 0.1)  # only "explode" the 3rd slice 
+
+    #define Seaborn color palette to use
+    # colors = sns.color_palette('pastel')[0:18]
+    colors = ['dodgerblue', 'wheat', 'limegreen', 'olivedrab', 'deeppink', 'red', 'gold', 'darkkhaki', 'royalblue',
+            'tan', 'slateblue', 'grey', 'mediumorchid', 'lightgray', 'sienna', 'aqua', 'pink', 'lightskyblue']
+
+    #create pie chart
+    plt.pie(data, labels = labels, colors = colors, autopct='%.1f%%', explode=explode)
+    plt.axis('equal')
+    plt.title("Percentage of Different Primary Types of Pokemon")
+    plt.plot()
+    fig=plt.gcf()
+    fig.set_size_inches(7,7)
+    plt.show()
+
+def secondary_type_pie_chart():
+    #define data
+    labels = ['Flying', 'Ground', 'Poison', 'Psychic', 'Fighting', 'Grass', 'Fairy', 'Steel', 'Dark', 'Dragon',
+            'Water', 'Ghost', 'Ice', 'Rock', 'Fire', 'Electric', 'Normal', 'Bug']
+
+    data = [23.4, 8.5, 8.2, 8.0, 6.3, 6.0, 5.6, 5.3, 4.8, 4.3, 3.4, 3.4, 3.4, 3.4, 2.9, 1.4, 1.0, 0.7]
+    explode = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.1, 0.1, 0.1, 0.1,0.1, 0.1, 0.1)  # only "explode" the 3rd slice 
+
+    #define Seaborn color palette to use
+    # colors = sns.color_palette('pastel')[0:18]
+    colors = ['lightskyblue', 'tan', 'mediumorchid', 'deeppink', 'sienna', 'limegreen', 'pink', 'lightgray', 'grey', 'royalblue',
+            'dodgerblue', 'slateblue', 'aqua', 'darkkhaki', 'red', 'gold', 'wheat', 'olivedrab']
+
+    #create pie chart
+    plt.pie(data, labels = labels, colors = colors, autopct='%.1f%%', explode=explode)
+    plt.axis('equal')
+    plt.title("Percentage of Different Secondary Types of Pokemon")
+    plt.plot()
+    fig=plt.gcf()
+    fig.set_size_inches(7,7)
+    plt.show()
