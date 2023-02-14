@@ -48,12 +48,14 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 
 ### Initial questions:
+- What is the percentage breakdown of primary and secondary types?
+- What are the correlations in the data?
 - What pokemon in Pokemon Go has the highest and lowest cp?
 - What "S tier pokemon" in Pokemon Go has the highest and lowest Battle Stat?
 - What pokemon in Pokemon Go has the highest and lowest average battle stat between all of their move sets?
 - What primary type has the highest average total stats?
 - What does the highest and lowest average total stats look like compared? (Dragon vs Bug)
-- 
+- How does the total base stats look by generation? Does it increase? Decrease?
 
 ### Need to haves (Deliverables):
 - A new csv with updated pokemon data for up to generation 8.
