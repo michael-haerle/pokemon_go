@@ -68,7 +68,7 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 
 ### Steps to Reproduce:
-- Download the csv's found in the git repository, the wrangle.py file, and the final_notebook.ipynb.
+- Download the csv's found in the git repository, wrangle.py, explore.py, and the final_notebook.ipynb.
 - Then run the final_notebook.
 
 ***
@@ -118,6 +118,7 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 
 ### Prepare steps: 
+- ER or Equivalent Rating is changed to Battle_Stat to make it more intuitive.
 - 
 
 *********************
