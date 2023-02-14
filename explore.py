@@ -148,3 +148,10 @@ def secondary_type_pie_chart():
     fig=plt.gcf()
     fig.set_size_inches(7,7)
     plt.show()
+
+def corr_heatmap(df_best_attack_set):
+    plt.figure(figsize=(10,8))
+    sns.heatmap(df_best_attack_set.corr(),annot=True, cmap='icefire')
+    plt.title('Correlation Heatmap')
+    plt.xticks(rotation=80)
+    plt.show()
