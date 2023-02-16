@@ -32,9 +32,9 @@ def pri_type_avg_stats(df_best_attack_set):
     avg_stats_by_primary_type_total = avg_stats_by_primary_type.sort_values('Total', ascending=False)
     plt.figure(figsize=(15, 8))
     sns.barplot(x = avg_stats_by_primary_type_total.index, y = avg_stats_by_primary_type_total.Total,
-            palette = ['royalblue', 'lightgray', 'lightskyblue', 'deeppink', 'red', 'darkkhaki', 'grey',
-                        'gold', 'slateblue', 'tan', 'aqua', 'dodgerblue', 'limegreen', 'sienna',
-                        'pink', 'wheat', 'mediumorchid', 'olivedrab'])
+            palette = ['royalblue', 'aqua', 'deeppink', 'red', 'darkkhaki', 'slateblue',
+                            'sienna', 'gold', 'grey', 'pink', 'mediumorchid', 'lightgray', 'tan', 'dodgerblue',
+                            'limegreen', 'lightskyblue', 'wheat', 'olivedrab'])
     plt.title('Dragon as a primary type has the highest average total stats')
 
 def dragon_vs_bug_atk_def_vis(df_best_attack_set):
