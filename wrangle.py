@@ -14,5 +14,6 @@ def wrangle_df():
     df_best_attack_set = pd.read_csv('Best_Attack_Set_Updated.csv')
     df_best_attack_set.drop("Unnamed: 0", axis='columns', inplace=True)
     df_best_attack_set.drop("Unnamed: 20", axis='columns', inplace=True)
+    df_best_attack_set['Type 1'] = df_best_attack_set['Type 1'].str.strip()
     return df, df1, df_best_attack_set
 
