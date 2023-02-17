@@ -155,3 +155,10 @@ def corr_heatmap(df_best_attack_set):
     plt.title('Correlation Heatmap')
     plt.xticks(rotation=80)
     plt.show()
+
+def box_plot(df1):
+    plt.figure(figsize=(10,8))
+    df_box=df1.drop(['Generation','Total', '#', 'Legendary'],axis=1)
+    sns.boxplot(data=df_box)
+    plt.show()
+    return df_box
