@@ -160,5 +160,6 @@ def box_plot(df1):
     plt.figure(figsize=(10,8))
     df_box=df1.drop(['Generation','Total', '#', 'Legendary'],axis=1)
     sns.boxplot(data=df_box)
+    plt.title('Stats Outliers')
     plt.show()
     return df_box
