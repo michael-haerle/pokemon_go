@@ -81,16 +81,73 @@ def dragon_vs_bug_spatk_spdef_vis(df_best_attack_set):
     fig.set_size_inches(12,6) #set the size for the figure
     plt.show()
 
-def stats_by_gen_vis(df1):
-    avg_stats_by_gen = df1.groupby('Generation').mean()
-    plt.figure(figsize=(15, 8))
-    gfg = sns.lineplot(data=df1, x="Type 1", y="Total", hue="Generation", ci=None, palette='hls', style="Generation", markers=True)
-    # for legend text
-    plt.setp(gfg.get_legend().get_texts(), fontsize='13')  
-    # for legend title
-    plt.setp(gfg.get_legend().get_title(), fontsize='20') 
-    plt.title('Total Stats Average by Type and Generation')
-    plt.show()
+def stats_by_gen_vis(df_best_attack_set):
+   Gen1 = df_best_attack_set[df_best_attack_set.Generation == 1]
+   Gen1 = Gen1.groupby('Type 1').mean()
+   Gen1 = Gen1.reset_index()
+   Gen1 = Gen1[['Type 1', 'Total']]
+   Gen1_2 = {'Type 1': 'Flying', 'Total': 0}
+   Gen1 = Gen1.append(Gen1_2, ignore_index = True)
+   Gen1 = Gen1.set_index('Type 1').sort_index(ascending=True).reset_index()
+   Gen2 = df_best_attack_set[df_best_attack_set.Generation == 2]
+   Gen2 = Gen2.groupby('Type 1').mean()
+   Gen2 = Gen2.reset_index()
+   Gen2 = Gen2[['Type 1', 'Total']]
+   Gen2_2 = {'Type 1': 'Flying', 'Total': 0}
+   Gen2 = Gen2.append(Gen2_2, ignore_index = True)
+   Gen2 = Gen2.set_index('Type 1').sort_index(ascending=True).reset_index()
+   Gen3 = df_best_attack_set[df_best_attack_set.Generation == 3]
+   Gen3 = Gen3.groupby('Type 1').mean()
+   Gen3 = Gen3.reset_index()
+   Gen3 = Gen3[['Type 1', 'Total']]
+   Gen3_2 = {'Type 1': 'Flying', 'Total': 0}
+   Gen3 = Gen3.append(Gen3_2, ignore_index = True)
+   Gen3 = Gen3.set_index('Type 1').sort_index(ascending=True).reset_index()
+   Gen4 = df_best_attack_set[df_best_attack_set.Generation == 4]
+   Gen4 = Gen4.groupby('Type 1').mean()
+   Gen4 = Gen4.reset_index()
+   Gen4 = Gen4[['Type 1', 'Total']]
+   Gen4_2 = {'Type 1': 'Flying', 'Total': 0}
+   Gen4 = Gen4.append(Gen4_2, ignore_index = True)
+   Gen4 = Gen4.set_index('Type 1').sort_index(ascending=True).reset_index()
+   Gen5 = df_best_attack_set[df_best_attack_set.Generation == 5]
+   Gen5 = Gen5.groupby('Type 1').mean()
+   Gen5 = Gen5.reset_index()
+   Gen5 = Gen5[['Type 1', 'Total']]
+   Gen5_2 = {'Type 1': 'Fairy', 'Total': 0}
+   Gen5 = Gen5.append(Gen5_2, ignore_index = True)
+   Gen5 = Gen5.set_index('Type 1').sort_index(ascending=True).reset_index()
+   Gen6 = df_best_attack_set[df_best_attack_set.Generation == 6]
+   Gen6 = Gen6.groupby('Type 1').mean()
+   Gen6 = Gen6.reset_index()
+   Gen6 = Gen6[['Type 1', 'Total']]
+   Gen6_2 = {'Type 1': 'Ground', 'Total': 0}
+   Gen6 = Gen6.append(Gen6_2, ignore_index = True)
+   Gen6 = Gen6.set_index('Type 1').sort_index(ascending=True).reset_index()
+   Gen7 = df_best_attack_set[df_best_attack_set.Generation == 7]
+   Gen7 = Gen7.groupby('Type 1').mean()
+   Gen7 = Gen7.reset_index()
+   Gen7 = Gen7[['Type 1', 'Total']]
+   Gen7_2 = {'Type 1': 'Flying', 'Total': 0}
+   Gen7 = Gen7.append(Gen7_2, ignore_index = True)
+   Gen7 = Gen7.set_index('Type 1').sort_index(ascending=True).reset_index()
+   Gen8 = df_best_attack_set[df_best_attack_set.Generation == 8]
+   Gen8 = Gen8.groupby('Type 1').mean()
+   Gen8 = Gen8.reset_index()
+   Gen8 = Gen8[['Type 1', 'Total']]
+   Gen8 = Gen8.set_index('Type 1').sort_index(ascending=True).reset_index()
+   plt.figure(figsize=(15, 8))
+   plt.plot('Type 1', 'Total', data=Gen1, label='Gen 1')
+   plt.plot('Type 1', 'Total', data=Gen2, label='Gen 2', linestyle='dotted')
+   plt.plot('Type 1', 'Total', data=Gen3, label='Gen 3', linestyle='dashed')
+   plt.plot('Type 1', 'Total', data=Gen4, label='Gen 4', linestyle='dashdot')
+   plt.plot('Type 1', 'Total', data=Gen5, label='Gen 5', marker='.')
+   plt.plot('Type 1', 'Total', data=Gen6, label='Gen 6', marker='s')
+   plt.plot('Type 1', 'Total', data=Gen7, label='Gen 7', marker='o')
+   plt.plot('Type 1', 'Total', data=Gen8, label='Gen 8', marker='*')
+   plt.ylim(200)
+   plt.legend(fontsize=13)
+   plt.show()
 
 def top_10_types_by_generation(df1):
     plt.figure(figsize=(15,8))
