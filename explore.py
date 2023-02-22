@@ -152,12 +152,12 @@ def stats_by_gen_vis(df_best_attack_set):
    plt.legend(fontsize=13)
    plt.show()
 
-def top_10_types_by_generation(df1):
+def top_10_types_by_generation(df_best_attack_set):
     plt.figure(figsize=(15,8))
     #take the top 10 Types
-    top_types=df1['Type 1'].value_counts()[:10]
+    top_types=df_best_attack_set['Type 1'].value_counts()[:10]
     #take the pokemons of the type with highest numbers, top 10
-    df3=df1[df1['Type 1'].isin(top_types.index)]
+    df3=df_best_attack_set[df_best_attack_set['Type 1'].isin(top_types.index)]
     # this plot shows the points belonging to individual pokemons
     sns.swarmplot(x='Generation',y='Total',data=df3,hue='Legendary')
     # It is distributed by Type
