@@ -146,6 +146,9 @@ def stats_by_gen_vis(df_best_attack_set):
    plt.plot('Type 1', 'Total', data=Gen7, label='Gen 7', marker='o')
    plt.plot('Type 1', 'Total', data=Gen8, label='Gen 8', marker='*')
    plt.ylim(200)
+   plt.xlabel('Average Total Stats')
+   plt.ylabel('Type 1')
+   plt.title('Average Total Stats by Primary Type')
    plt.legend(fontsize=13)
    plt.show()
 
