@@ -216,9 +216,10 @@ def corr_heatmap(df_best_attack_set):
     plt.xticks(rotation=80)
     plt.show()
 
-def box_plot(df1):
+def box_plot(df_best_attack_set):
     plt.figure(figsize=(10,8))
-    df_box=df1.drop(['Generation','Total', '#', 'Legendary'],axis=1)
+    df_box=df_best_attack_set.drop(['Generation','Total', '#', 'Legendary',
+     'Max_CP_Lv40', 'Battle_Stat', 'TDO', 'DPS', 'Fast_Move', 'Charged_Move'],axis=1)
     sns.boxplot(data=df_box)
     plt.title('Stats Outliers')
     plt.show()
