@@ -161,7 +161,6 @@ def top_10_types_by_generation(df_best_attack_set):
     # this plot shows the points belonging to individual pokemons
     sns.swarmplot(x='Generation',y='Total',data=df3,hue='Legendary')
     # It is distributed by Type
-    plt.axhline(df3['Total'].mean(),color='red',linestyle='dashed')
     plt.title('Top 10 Pokemon by Type and Average Total Stats in Each Generation')
     plt.show()
 
@@ -224,3 +223,15 @@ def box_plot(df_best_attack_set):
     plt.title('Stats Outliers')
     plt.show()
     return df_box
+
+def s_tier_attackers(df_best_attack_set):
+    S_tier_attackers = ['Kartana', 'Terrakion', 'Shadow Metagross', 'Shadow Machamp',
+                    'Shadow Mewtwo', 'Shadow Salamence', 'Shadow Dragonite', 'Mega Latios',
+                    'Mega Gengar', 'Mega Charizard Y', 'Shadow Mamoswine']
+    df_S_tier_attackers = df_best_attack_set[(df_best_attack_set.Pokemon == 'Kartana') | (df_best_attack_set.Pokemon == 'Terrakion') |
+                  (df_best_attack_set.Pokemon == 'Shadow Metagross') | (df_best_attack_set.Pokemon == 'Shadow Machamp') |
+                  (df_best_attack_set.Pokemon == 'Shadow Mewtwo') | (df_best_attack_set.Pokemon == 'Shadow Salamence') |
+                  (df_best_attack_set.Pokemon == 'Shadow Dragonite') | (df_best_attack_set.Pokemon == 'Mega Latios') |
+                  (df_best_attack_set.Pokemon == 'Shadow Gengar') | (df_best_attack_set.Pokemon == 'Mega Charizard Y') |
+                  (df_best_attack_set.Pokemon == 'Shadow Mamoswine')]
+    return df_S_tier_attackers
