@@ -123,7 +123,8 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 ### Prepare steps: 
 - ER or Equivalent Rating is changed to Battle_Stat to make it more intuitive.
-- 
+- Unnecessary/duplicate columns are dropped.
+- Data from pokemon go and the main series games were joined to make one data set.
 
 *********************
 
