@@ -65,7 +65,7 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 ### Nice to haves (With more time):
  - Feature engineering columns for if the pokemon is a mythical, ultra beast, baby form, has multiple forms, or has a primal form.
-
+- Add the newly released generation 9 pokemon.
 
 ### Steps to Reproduce:
 - Download the csv's found in the git repository, wrangle.py, explore.py, and the final_notebook.ipynb.
@@ -117,7 +117,9 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 ![]()
 
 ### Acquire steps:
-- 
+- Downloaded a pokemon csv from kaggle. This contained a information on generations 1-5 for the main series games.
+- Downloaded a pokemon go csv from a community site called Gamepress.
+- Used Bulbapedia to add information on generations 6-8.
 
 ### Prepare steps: 
 - ER or Equivalent Rating is changed to Battle_Stat to make it more intuitive.
