@@ -116,6 +116,8 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 
 ![]()
 
+### Acquire steps:
+- 
 
 ### Prepare steps: 
 - ER or Equivalent Rating is changed to Battle_Stat to make it more intuitive.
