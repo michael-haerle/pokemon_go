@@ -76,7 +76,11 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
 ## <a name="findings"></a>Key Findings:
 [[Back to top](#top)]
 
-- 
+- Max_CP_Lv40 has a very strong correlation with TDO, Battle_Stat, Total, Attack, and Sp Atk.
+- Generation 8 was the only generation that added one of every primary type.
+- Dragon has the highest average total stats for primary type while bug has the lowest.
+
+
 
 
 ***
