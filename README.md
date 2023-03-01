@@ -135,17 +135,24 @@ What is Battle Stat? Battle stat is the name I use to call stat that is used to 
     - explore.py
 
 
-### Takeaways from exploration:
-- 
-
 
 ***
 
 
 ## <a name="conclusion"></a>Conclusion:
 
-- 
+- While flying is the least common primary type it is the most common secondary type.
+- Max_CP_Lv40 has a very strong correlation with TDO, Battle_Stat, Total, Attack, and Sp Atk.
+- Dragon has the highest average total stats for primary type while bug has the lowest.
+- Generation 8 has a massive jump in the Poison total stat average. (This is due to Eternamax Eternatus)
+- Generation 8 was the only generation that added one of every primary type.
+- Generation 5 seems to have a hard limit to the total stats a pokemon can have.
+- Generation 6 made sure non-legendaries and legendaries had a clear difference in stats.
 
 #### Next Steps Here 
+
+- Feature engineering columns for if the pokemon is a mythical, ultra beast, baby form, has multiple forms, or has a primal form.
+- Add the newly released generation 9 pokemon.
+
 
 [[Back to top](#top)]
